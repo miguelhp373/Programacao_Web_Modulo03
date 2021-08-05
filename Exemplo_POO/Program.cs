@@ -16,7 +16,7 @@ namespace Exemplo_POO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrMenu());
+            Application.Run(new FrLogin());
         }
     }
 }

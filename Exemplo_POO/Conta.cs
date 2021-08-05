@@ -9,13 +9,56 @@ namespace Exemplo_POO
     class Conta
     {
         //atributos
-        public int    numero;
-        public string agencia;
-        public string nome_cliente;
-        public double saldo;
+        protected int numero;
+        public int _numero
+        {
+            get
+            {
+                return numero;
+            }
+
+            set
+            {
+                numero = value;
+            }
+        }
+
+        protected string agencia;
+        public string _agencia {
+            get
+            {
+                return agencia;
+            }
+
+            set
+            {
+                agencia = value;
+            }
+
+        }
+
+        protected string nome_cliente;
+        public string _nome_cliente
+        {
+            get
+            {
+                return nome_cliente;
+            }
+
+            set
+            {
+                nome_cliente = value;
+            }
+        }
+
+        protected double saldo;
+        public double _saldo;
 
         //metodos
-    public void Saque(double valor)
+    
+ 
+
+         public void Saque(double valor)
         {
 
             if (saldo > 0)
@@ -24,14 +67,15 @@ namespace Exemplo_POO
             }
         }
 
-    public void Deposito(double valor)
+        public void Deposito(double valor)
         {
             saldo += valor;
         }
 
         public double ShowSaldo()
         {
-            return Math.Round(saldo,2);
+            _saldo = saldo;
+            return Math.Round(_saldo, 2);
         }
 
     }

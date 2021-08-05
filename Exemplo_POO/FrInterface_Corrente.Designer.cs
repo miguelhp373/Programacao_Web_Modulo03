@@ -1,17 +1,17 @@
 ﻿
 namespace Exemplo_POO
 {
-    partial class FrMenu
+    partial class FrInterface_Corrente
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,21 +21,16 @@ namespace Exemplo_POO
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.conta = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.agencia = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.saldo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,67 +42,19 @@ namespace Exemplo_POO
             this.valor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.conta = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.agencia = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 69);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 369);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.OrangeRed;
-            this.panel2.Controls.Add(this.conta);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.agencia);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(436, 63);
-            this.panel2.TabIndex = 1;
-            // 
-            // conta
-            // 
-            this.conta.Location = new System.Drawing.Point(294, 24);
-            this.conta.Name = "conta";
-            this.conta.Size = new System.Drawing.Size(100, 20);
-            this.conta.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(253, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Conta:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Agência:";
-            // 
-            // agencia
-            // 
-            this.agencia.Location = new System.Drawing.Point(80, 24);
-            this.agencia.Name = "agencia";
-            this.agencia.Size = new System.Drawing.Size(100, 20);
-            this.agencia.TabIndex = 4;
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel4.BackColor = System.Drawing.Color.Coral;
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.panel3);
@@ -119,10 +66,20 @@ namespace Exemplo_POO
             this.panel4.Controls.Add(this.valor);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(3, 62);
+            this.panel4.Location = new System.Drawing.Point(1, 63);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(436, 376);
-            this.panel4.TabIndex = 0;
+            this.panel4.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(241, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 20);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Criar Conta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -227,56 +184,97 @@ namespace Exemplo_POO
             this.label2.TabIndex = 1;
             this.label2.Text = "Cliente:";
             // 
-            // button2
+            // panel2
             // 
-            this.button2.Location = new System.Drawing.Point(241, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 20);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Criar Conta";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel2.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel2.Controls.Add(this.conta);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.agencia);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(436, 63);
+            this.panel2.TabIndex = 5;
             // 
-            // FrMenu
+            // conta
+            // 
+            this.conta.Location = new System.Drawing.Point(294, 24);
+            this.conta.Name = "conta";
+            this.conta.Size = new System.Drawing.Size(100, 20);
+            this.conta.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(436, 369);
+            this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(253, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Conta:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Agência:";
+            // 
+            // agencia
+            // 
+            this.agencia.Location = new System.Drawing.Point(80, 24);
+            this.agencia.Name = "agencia";
+            this.agencia.Size = new System.Drawing.Size(100, 20);
+            this.agencia.TabIndex = 4;
+            // 
+            // FrInterface_Corrente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 443);
+            this.ClientSize = new System.Drawing.Size(437, 436);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "FrMenu";
-            this.Text = "Banco";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Name = "FrInterface_Corrente";
+            this.Text = "Conta Corrente";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox conta;
-        private System.Windows.Forms.TextBox agencia;
-        private System.Windows.Forms.TextBox cliente;
-        private System.Windows.Forms.TextBox valor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton tip02;
-        private System.Windows.Forms.RadioButton tip01;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label saldo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton tip02;
+        private System.Windows.Forms.RadioButton tip01;
+        private System.Windows.Forms.TextBox cliente;
+        private System.Windows.Forms.TextBox valor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox conta;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox agencia;
     }
 }
-

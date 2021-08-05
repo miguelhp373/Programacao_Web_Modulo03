@@ -10,25 +10,41 @@ using System.Windows.Forms;
 
 namespace Exemplo_POO
 {
-    public partial class FrMenu : Form
+    public partial class FrInterface_Poupanca : Form
     {
-        public FrMenu()
+        public FrInterface_Poupanca()
         {
             InitializeComponent();
         }
 
         Conta ct = new Conta();//instância da conta
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ct._agencia = agencia.Text;
+            ct._numero = Convert.ToInt32(conta.Text);
+            ct._nome_cliente = cliente.Text;
+
+            MessageBox.Show("Conta Cadastrada com Sucesso!"
+                + "\n" +
+                "Agência: " + ct._agencia
+                + "\n" +
+                "Conta: " + ct._numero
+                + "\n" +
+                "Cliente: " + ct._nome_cliente,
+                "Dados do Cliente");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             double valorOperacao = Convert.ToDouble(valor.Text);
             if (tip01.Checked == true)
             {
-                if ((valorOperacao > ct.saldo) || (ct.saldo < 1))
+                if ((valorOperacao > ct._saldo) || (ct._saldo < 1))
                 {
                     MessageBox.Show("Erro ao Executar a Operação, Saldo Indisponivel!", "Erro");
                 }
-                else if (ct.saldo > 0)
+                else if (ct._saldo > 0)
                 {
                     ct.Saque(valorOperacao);
                     saldo.Text = Convert.ToString(ct.ShowSaldo());
@@ -42,22 +58,6 @@ namespace Exemplo_POO
 
                 MessageBox.Show("Depósito de R$ " + valorOperacao + " Efetuado com Sucesso!", "info");
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ct.agencia = agencia.Text;
-            ct.numero = Convert.ToInt32(conta.Text);
-            ct.nome_cliente = cliente.Text;
-
-            MessageBox.Show("Conta Cadastrada com Sucesso!"
-                + "\n" + 
-                "Agência: " + ct.agencia 
-                +"\n" +
-                "Conta: " + ct.numero 
-                +"\n" +
-                "Cliente: " + ct.nome_cliente,
-                "Dados do Cliente");
         }
     }
 }
