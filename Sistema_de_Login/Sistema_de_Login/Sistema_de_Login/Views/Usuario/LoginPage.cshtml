@@ -1,0 +1,43 @@
+﻿@model Sistema_de_Login.Models.Usuario
+
+@{
+    ViewData["Title"] = "Página de Login - Sistema de Login";
+}
+
+<h2>Página de Lógin</h2>
+<style>
+    {
+        color: red;
+        float: left;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+</style>
+<br />
+<center>
+    <h1>Login</h1>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        
+        <fieldset style="width: 40%;">
+
+            <br />
+            <input type="text" class="from-control" name="Login" id="Login" placeholder=" Informe o login do usuario...">
+            @Html.ValidationMessageFor(model => model.Login)
+            <br /><br />
+            <input type="password" class="from-control" name="Senha" id="Senha" placeholder=" Informe a senha do usuario...">
+            @Html.ValidationMessageFor(model => model.Senha)
+            <br /><br />
+            <button type="submit" class="btn btn-primary" style="background-color:mediumseagreen; border:1;">Login</button>
+            @if (ViewBag.Erro != null)
+            {
+                <h3 style="padding:20px; color:white; background-color:dimgray">
+                    @ViewBag.Erro
+                </h3>
+            }
+        </fieldset>
+    }
+</center>
+
